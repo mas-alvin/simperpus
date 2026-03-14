@@ -1,4 +1,12 @@
-<?php include __DIR__ . '/layouts/layout.php'; ?>
+<?php
+session_start();
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+
+include __DIR__ . '/layouts/layout.php';
+?>
 <div class="p-2 space-y-8">
     <div>
         <h2 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Dashboard Overview</h2>
@@ -9,7 +17,7 @@
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
         <!-- Stat 1: Total Books (Large Icon) -->
         <div
-            class="md:col-span-3 lg:col-span-4 bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 flex items-center justify-between">
+            class="md:col-span-3 lg:col-span-4 bg-white dark:bg-slate-900 p-6 rounded-xl border border-blue-700/10 flex items-center justify-between">
             <div>
                 <p class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Books
                 </p>
@@ -19,13 +27,13 @@
                     <span>+2.5% bln ini</span>
                 </div>
             </div>
-            <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+            <div class="w-16 h-16 rounded-2xl bg-blue-700/10 flex items-center justify-center text-blue-700">
                 <span class="material-symbols-outlined text-4xl font-light">auto_stories</span>
             </div>
         </div>
         <!-- Stat 2: Total Members -->
         <div
-            class="md:col-span-3 lg:col-span-4 bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 flex items-center justify-between">
+            class="md:col-span-3 lg:col-span-4 bg-white dark:bg-slate-900 p-6 rounded-xl border border-blue-700/10 flex items-center justify-between">
             <div>
                 <p class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Members
                 </p>
@@ -40,18 +48,18 @@
             </div>
         </div>
         <!-- Stat 3: Borrowed vs Available (Progress/Chart) -->
-        <div class="md:col-span-6 lg:col-span-4 bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10">
+        <div class="md:col-span-6 lg:col-span-4 bg-white dark:bg-slate-900 p-6 rounded-xl border border-blue-700/10">
             <div class="flex justify-between items-start mb-4">
                 <p class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Book
                     Availability</p>
-                <span class="text-xs font-bold bg-primary/10 text-primary px-2 py-1 rounded">Live</span>
+                <span class="text-xs font-bold bg-blue-700/10 text-blue-700 px-2 py-1 rounded">Live</span>
             </div>
             <div class="flex items-end justify-between mb-2">
                 <h3 class="text-2xl font-bold">65% Dipinjam</h3>
                 <span class="text-sm text-slate-500">8,092 / 12,450</span>
             </div>
             <div class="w-full h-4 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                <div class="bg-primary h-full rounded-full" style="width: 65%"></div>
+                <div class="bg-blue-700 h-full rounded-full" style="width: 65%"></div>
             </div>
             <p class="text-xs text-slate-400 mt-3 flex items-center gap-1">
                 <span class="material-symbols-outlined text-xs">info</span>
@@ -59,7 +67,7 @@
             </p>
         </div>
         <!-- Stat 4: Transactions This Month (Trend) -->
-        <div class="md:col-span-3 lg:col-span-6 bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10">
+        <div class="md:col-span-3 lg:col-span-6 bg-white dark:bg-slate-900 p-6 rounded-xl border border-blue-700/10">
             <div class="flex items-center gap-4">
                 <div
                     class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300">
@@ -80,18 +88,18 @@
             </div>
             <div class="mt-6 h-12 flex items-end gap-1">
                 <!-- Simple Sparkline Placeholder -->
-                <div class="flex-1 bg-primary/20 h-[30%] rounded-t"></div>
-                <div class="flex-1 bg-primary/20 h-[45%] rounded-t"></div>
-                <div class="flex-1 bg-primary/20 h-[35%] rounded-t"></div>
-                <div class="flex-1 bg-primary/20 h-[60%] rounded-t"></div>
-                <div class="flex-1 bg-primary/20 h-[55%] rounded-t"></div>
-                <div class="flex-1 bg-primary/20 h-[80%] rounded-t"></div>
-                <div class="flex-1 bg-primary h-[100%] rounded-t"></div>
+                <div class="flex-1 bg-blue-700/20 h-[30%] rounded-t"></div>
+                <div class="flex-1 bg-blue-700/20 h-[45%] rounded-t"></div>
+                <div class="flex-1 bg-blue-700/20 h-[35%] rounded-t"></div>
+                <div class="flex-1 bg-blue-700/20 h-[60%] rounded-t"></div>
+                <div class="flex-1 bg-blue-700/20 h-[55%] rounded-t"></div>
+                <div class="flex-1 bg-blue-700/20 h-[80%] rounded-t"></div>
+                <div class="flex-1 bg-blue-700 h-[100%] rounded-t"></div>
             </div>
         </div>
         <!-- Stat 5: Active Loans -->
         <div
-            class="md:col-span-3 lg:col-span-6 bg-primary p-6 rounded-xl border border-primary/20 relative overflow-hidden group">
+            class="md:col-span-3 lg:col-span-6 bg-blue-700 p-6 rounded-xl border border-blue-700/20 relative overflow-hidden group">
             <!-- Abstract Pattern -->
             <div
                 class="absolute -right-8 -bottom-8 text-white/10 scale-[4] group-hover:scale-[4.5] transition-transform duration-700">
@@ -99,7 +107,7 @@
             </div>
             <div class="relative z-10 flex flex-col h-full justify-between">
                 <div>
-                    <p class="text-primary-100/80 text-sm font-medium uppercase tracking-wider text-white/80">Active
+                    <p class="text-blue-100/80 text-sm font-medium uppercase tracking-wider text-white/80">Active
                         Loans</p>
                     <h3 class="text-5xl font-black text-white mt-2">420</h3>
                 </div>
@@ -115,12 +123,12 @@
         </div>
     </div>
     <!-- Recent Activity Section (Additional for completeness) -->
-    <div class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 overflow-hidden">
-        <div class="px-6 py-4 border-b border-primary/10 flex items-center justify-between">
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-blue-700/10 overflow-hidden">
+        <div class="px-6 py-4 border-b border-blue-700/10 flex items-center justify-between">
             <h4 class="font-bold text-slate-900 dark:text-white">Aktivitas Terbaru</h4>
-            <a class="text-primary text-sm font-semibold hover:underline" href="#">Lihat Semua</a>
+            <a class="text-blue-700 text-sm font-semibold hover:underline" href="#">Lihat Semua</a>
         </div>
-        <div class="divide-y divide-primary/5">
+        <div class="divide-y divide-blue-700/5">
             <div class="px-6 py-4 flex items-center gap-4">
                 <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
                     <img alt="Budi" class="rounded-full" data-alt="Avatar of a male library member"

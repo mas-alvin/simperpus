@@ -3,7 +3,7 @@
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-500 mb-6">
         <a href="/manajemen-perpustakaan/menu/management-transaction/"
-            class="hover:text-primary transition-colors">Transactions</a>
+            class="hover:text-blue-700 transition-colors">Transactions</a>
         <span class="material-symbols-outlined text-[16px]">chevron_right</span>
         <span class="text-slate-900 dark:text-white font-medium">New Transaction</span>
     </div>
@@ -23,7 +23,7 @@
                     Member <span class="text-rose-500">*</span>
                 </label>
                 <select id="member_id" name="member_id" required
-                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 transition-colors">
+                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors">
                     <option value="">Select member...</option>
                     <option value="1">MBR-2024-001 — Budi Santoso</option>
                     <option value="2">MBR-2024-002 — Sari Indah</option>
@@ -38,7 +38,7 @@
                     Book <span class="text-rose-500">*</span>
                 </label>
                 <select id="book_id" name="book_id" required
-                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 transition-colors">
+                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors">
                     <option value="">Select book...</option>
                     <option value="1">The Silent Patient — Alex Michaelides (12 available)</option>
                     <option value="2">Great Expectations — Charles Dickens (3 available)</option>
@@ -55,14 +55,14 @@
                         Borrow Date <span class="text-rose-500">*</span>
                     </label>
                     <input type="date" id="borrow_date" name="borrow_date" required
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 transition-colors" />
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors" />
                 </div>
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5" for="due_date">
                         Due Date <span class="text-rose-500">*</span>
                     </label>
                     <input type="date" id="due_date" name="due_date" required
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 transition-colors" />
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors" />
                 </div>
             </div>
 
@@ -72,13 +72,13 @@
                     Notes
                 </label>
                 <textarea id="notes" name="notes" rows="3"
-                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors resize-none"
+                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors resize-none"
                     placeholder="Additional notes..."></textarea>
             </div>
 
             <!-- Info Box -->
-            <div class="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/15">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">info</span>
+            <div class="flex items-start gap-3 p-4 bg-blue-700/5 rounded-lg border border-blue-700/15">
+                <span class="material-symbols-outlined text-blue-700 text-[20px] mt-0.5">info</span>
                 <p class="text-sm text-slate-600 dark:text-slate-400">Standard loan period is <strong>14 days</strong>.
                     Late returns will incur a fine of <strong>Rp 1,000/day</strong>.</p>
             </div>
@@ -90,7 +90,7 @@
                     Cancel
                 </a>
                 <button type="submit"
-                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm inline-flex items-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                    class="bg-blue-700 hover:bg-blue-700/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm inline-flex items-center gap-2 shadow-lg shadow-blue-700/20 transition-all">
                     <span class="material-symbols-outlined text-[20px]">save</span>
                     Create Transaction
                 </button>

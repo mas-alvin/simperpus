@@ -3,10 +3,10 @@
     <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
         <div class="flex items-center justify-between mb-4">
             <p class="text-sm font-medium text-slate-500">Total Denda Aktif</p>
-            <span class="material-symbols-outlined text-rose-accent">warning</span>
+            <span class="material-symbols-outlined text-rose-500">warning</span>
         </div>
         <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Rp 14.000</h3>
-        <p class="text-xs text-rose-accent mt-2 font-medium flex items-center gap-1">
+        <p class="text-xs text-rose-500 mt-2 font-medium flex items-center gap-1">
             <span class="material-symbols-outlined text-xs">trending_up</span>
             +Rp 2.000 hari ini
         </p>
@@ -22,13 +22,13 @@
             Segera lakukan pengembalian
         </p>
     </div>
-    <div class="bg-primary/5 p-6 rounded-xl border border-primary/20 shadow-sm">
+    <div class="bg-blue-700/5 p-6 rounded-xl border border-blue-700/20 shadow-sm">
         <div class="flex items-center justify-between mb-4">
-            <p class="text-sm font-medium text-primary">Tarif Denda</p>
-            <span class="material-symbols-outlined text-primary">calculate</span>
+            <p class="text-sm font-medium text-blue-700">Tarif Denda</p>
+            <span class="material-symbols-outlined text-blue-700">calculate</span>
         </div>
-        <h3 class="text-2xl font-bold text-primary">Rp 2.000/Hari</h3>
-        <p class="text-xs text-primary/70 mt-2 font-medium">Berdasarkan kebijakan perpustakaan</p>
+        <h3 class="text-2xl font-bold text-blue-700">Rp 2.000/Hari</h3>
+        <p class="text-xs text-blue-700/70 mt-2 font-medium">Berdasarkan kebijakan perpustakaan</p>
     </div>
 </div>
 <!-- Loans Table Section -->
@@ -40,7 +40,7 @@
             <button
                 class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Semua</button>
             <button
-                class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-rose-accent/10 text-rose-accent border border-rose-accent/20">Terlambat</button>
+                class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-rose-500/10 text-rose-500 border border-rose-500/20">Terlambat</button>
         </div>
     </div>
     <div class="overflow-x-auto">
@@ -51,7 +51,7 @@
                     <th class="px-6 py-4 font-semibold">Tgl Pinjam</th>
                     <th class="px-6 py-4 font-semibold">Jatuh Tempo</th>
                     <th class="px-6 py-4 font-semibold">Keterlambatan</th>
-                    <th class="px-6 py-4 font-semibold text-rose-accent">Estimasi Denda</th>
+                    <th class="px-6 py-4 font-semibold text-rose-500">Estimasi Denda</th>
                     <th class="px-6 py-4 font-semibold text-right">Aksi</th>
                 </tr>
             </thead>
@@ -62,7 +62,7 @@
                         <div class="flex items-center gap-3">
                             <div
                                 class="w-10 h-14 bg-slate-100 dark:bg-slate-800 rounded flex-shrink-0 relative overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/40"
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-700/20 to-blue-700/40"
                                     data-alt="Book cover placeholder"></div>
                                 <span
                                     class="material-symbols-outlined absolute inset-0 m-auto text-slate-400">image</span>
@@ -77,13 +77,13 @@
                     <td class="px-6 py-4 text-slate-600 dark:text-slate-400">19 Okt 2023</td>
                     <td class="px-6 py-4">
                         <span
-                            class="px-2 py-1 bg-rose-accent/10 text-rose-accent text-[10px] font-bold rounded uppercase">4
+                            class="px-2 py-1 bg-rose-500/10 text-rose-500 text-[10px] font-bold rounded uppercase">4
                             Hari</span>
                     </td>
-                    <td class="px-6 py-4 font-bold text-rose-accent">Rp 8.000</td>
+                    <td class="px-6 py-4 font-bold text-rose-500">Rp 8.000</td>
                     <td class="px-6 py-4 text-right">
                         <button
-                            class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors">Proses
+                            class="bg-blue-700 hover:bg-blue-700/90 text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors">Proses
                             Kembali</button>
                     </td>
                 </tr>
@@ -108,13 +108,13 @@
                     <td class="px-6 py-4 text-slate-600 dark:text-slate-400">22 Okt 2023</td>
                     <td class="px-6 py-4">
                         <span
-                            class="px-2 py-1 bg-rose-accent/10 text-rose-accent text-[10px] font-bold rounded uppercase">2
+                            class="px-2 py-1 bg-rose-500/10 text-rose-500 text-[10px] font-bold rounded uppercase">2
                             Hari</span>
                     </td>
-                    <td class="px-6 py-4 font-bold text-rose-accent">Rp 4.000</td>
+                    <td class="px-6 py-4 font-bold text-rose-500">Rp 4.000</td>
                     <td class="px-6 py-4 text-right">
                         <button
-                            class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors">Proses
+                            class="bg-blue-700 hover:bg-blue-700/90 text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors">Proses
                             Kembali</button>
                     </td>
                 </tr>
@@ -166,13 +166,13 @@
                     <td class="px-6 py-4 text-slate-600 dark:text-slate-400">25 Okt 2023</td>
                     <td class="px-6 py-4">
                         <span
-                            class="px-2 py-1 bg-rose-accent/10 text-rose-accent text-[10px] font-bold rounded uppercase">1
+                            class="px-2 py-1 bg-rose-500/10 text-rose-500 text-[10px] font-bold rounded uppercase">1
                             Hari</span>
                     </td>
-                    <td class="px-6 py-4 font-bold text-rose-accent">Rp 2.000</td>
+                    <td class="px-6 py-4 font-bold text-rose-500">Rp 2.000</td>
                     <td class="px-6 py-4 text-right">
                         <button
-                            class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors">Proses
+                            class="bg-blue-700 hover:bg-blue-700/90 text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors">Proses
                             Kembali</button>
                     </td>
                 </tr>
@@ -185,7 +185,7 @@
         <div class="flex items-center gap-2">
             <button class="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded"><span
                     class="material-symbols-outlined text-sm">chevron_left</span></button>
-            <button class="w-6 h-6 bg-primary text-white rounded flex items-center justify-center">1</button>
+            <button class="w-6 h-6 bg-blue-700 text-white rounded flex items-center justify-center">1</button>
             <button
                 class="w-6 h-6 hover:bg-slate-200 dark:hover:bg-slate-700 rounded flex items-center justify-center">2</button>
             <button
@@ -200,7 +200,7 @@
     <div
         class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-center">
         <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary">analytics</span>
+            <span class="material-symbols-outlined text-blue-700">analytics</span>
             Kalkulator Denda Real-time
         </h4>
         <div class="space-y-4">
@@ -221,22 +221,22 @@
             </div>
             <div class="flex justify-between items-center pt-2">
                 <span class="text-base font-bold">Total Denda Harus Dibayar</span>
-                <span class="text-xl font-black text-rose-accent">Rp 14.000</span>
+                <span class="text-xl font-black text-rose-500">Rp 14.000</span>
             </div>
         </div>
     </div>
-    <div class="bg-primary p-8 rounded-xl text-white shadow-lg flex flex-col justify-between relative overflow-hidden">
+    <div class="bg-blue-700 p-8 rounded-xl text-white shadow-lg flex flex-col justify-between relative overflow-hidden">
         <!-- Abstract Pattern Background -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
         <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full -ml-12 -mb-12 blur-2xl"></div>
         <div class="relative">
             <h4 class="text-xl font-bold mb-2">Informasi Pembayaran</h4>
-            <p class="text-primary-100 text-sm opacity-90 leading-relaxed mb-6">Denda dapat dibayarkan langsung di loket
+            <p class="text-blue-100 text-sm opacity-90 leading-relaxed mb-6">Denda dapat dibayarkan langsung di loket
                 perpustakaan atau melalui dompet digital (GoPay/OVO/Dana) saat proses pengembalian buku di aplikasi.</p>
         </div>
         <div class="relative flex gap-4">
             <button
-                class="bg-white text-primary px-6 py-2.5 rounded-lg text-sm font-bold shadow-sm flex items-center gap-2">
+                class="bg-white text-blue-700 px-6 py-2.5 rounded-lg text-sm font-bold shadow-sm flex items-center gap-2">
                 <span class="material-symbols-outlined text-sm">payments</span>
                 Bayar Denda Sekarang
             </button>

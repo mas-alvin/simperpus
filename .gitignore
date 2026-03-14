@@ -1,0 +1,15 @@
+node_modules/
+vendor/
+
+# System Files & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Folder Upload Gambar (Abaikan Semua Isinya)
+assets/img/book/*
+assets/img/category/*
+
+# Kecuali File Default Yang Harus Ada
+!assets/img/book/default.png
+!assets/img/category/default.png

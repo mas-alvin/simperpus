@@ -9,11 +9,11 @@
             <span
                 class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
             <input
-                class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary"
+                class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-blue-700"
                 placeholder="Cari ID atau nama..." type="text" />
         </div>
         <a href="add.php"
-            class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all">
+            class="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-blue-700/90 transition-all">
             <span class="material-symbols-outlined text-sm">person_add</span>
             <span>Tambah Anggota</span>
         </a>
@@ -25,7 +25,7 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
         <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
             <div class="flex items-center justify-between mb-4">
-                <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">group</span>
+                <span class="material-symbols-outlined text-blue-700 bg-blue-700/10 p-2 rounded-lg">group</span>
                 <span class="text-emerald-500 text-xs font-bold">+12%</span>
             </div>
             <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Anggota</p>
@@ -92,7 +92,7 @@
                 </thead>
                 <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-medium text-primary">LIB-2024-001</td>
+                        <td class="px-6 py-4 text-sm font-medium text-blue-700">LIB-2024-001</td>
                         <td class="px-6 py-4">
                             <div class="flex items-center gap-3">
                                 <div
@@ -109,7 +109,7 @@
                             </span>
                         </td>
                         <td class="px-6 py-4 text-right">
-                            <button class="text-slate-400 hover:text-primary transition-colors">
+                            <button class="text-slate-400 hover:text-blue-700 transition-colors">
                                 <span class="material-symbols-outlined">edit</span>
                             </button>
                             <button class="text-slate-400 hover:text-rose-500 transition-colors ml-2">
@@ -118,7 +118,7 @@
                         </td>
                     </tr>
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-medium text-primary">LIB-2024-002</td>
+                        <td class="px-6 py-4 text-sm font-medium text-blue-700">LIB-2024-002</td>
                         <td class="px-6 py-4">
                             <div class="flex items-center gap-3">
                                 <div
@@ -135,7 +135,7 @@
                             </span>
                         </td>
                         <td class="px-6 py-4 text-right">
-                            <button class="text-slate-400 hover:text-primary transition-colors">
+                            <button class="text-slate-400 hover:text-blue-700 transition-colors">
                                 <span class="material-symbols-outlined">edit</span>
                             </button>
                             <button class="text-slate-400 hover:text-rose-500 transition-colors ml-2">
@@ -144,7 +144,7 @@
                         </td>
                     </tr>
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-medium text-primary">LIB-2024-003</td>
+                        <td class="px-6 py-4 text-sm font-medium text-blue-700">LIB-2024-003</td>
                         <td class="px-6 py-4">
                             <div class="flex items-center gap-3">
                                 <div
@@ -161,7 +161,7 @@
                             </span>
                         </td>
                         <td class="px-6 py-4 text-right">
-                            <button class="text-slate-400 hover:text-primary transition-colors">
+                            <button class="text-slate-400 hover:text-blue-700 transition-colors">
                                 <span class="material-symbols-outlined">edit</span>
                             </button>
                             <button class="text-slate-400 hover:text-rose-500 transition-colors ml-2">
@@ -170,7 +170,7 @@
                         </td>
                     </tr>
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-medium text-primary">LIB-2024-004</td>
+                        <td class="px-6 py-4 text-sm font-medium text-blue-700">LIB-2024-004</td>
                         <td class="px-6 py-4">
                             <div class="flex items-center gap-3">
                                 <div
@@ -187,7 +187,7 @@
                             </span>
                         </td>
                         <td class="px-6 py-4 text-right">
-                            <button class="text-slate-400 hover:text-primary transition-colors">
+                            <button class="text-slate-400 hover:text-blue-700 transition-colors">
                                 <span class="material-symbols-outlined">edit</span>
                             </button>
                             <button class="text-slate-400 hover:text-rose-500 transition-colors ml-2">
@@ -196,7 +196,7 @@
                         </td>
                     </tr>
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-medium text-primary">LIB-2024-005</td>
+                        <td class="px-6 py-4 text-sm font-medium text-blue-700">LIB-2024-005</td>
                         <td class="px-6 py-4">
                             <div class="flex items-center gap-3">
                                 <div
@@ -213,7 +213,7 @@
                             </span>
                         </td>
                         <td class="px-6 py-4 text-right">
-                            <button class="text-slate-400 hover:text-primary transition-colors">
+                            <button class="text-slate-400 hover:text-blue-700 transition-colors">
                                 <span class="material-symbols-outlined">edit</span>
                             </button>
                             <button class="text-slate-400 hover:text-rose-500 transition-colors ml-2">
@@ -230,7 +230,7 @@
                 <button
                     class="px-3 py-1 text-sm border border-slate-200 dark:border-slate-800 rounded hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-50"
                     disabled="">Sebelumnya</button>
-                <button class="px-3 py-1 text-sm bg-primary text-white rounded">1</button>
+                <button class="px-3 py-1 text-sm bg-blue-700 text-white rounded">1</button>
                 <button
                     class="px-3 py-1 text-sm border border-slate-200 dark:border-slate-800 rounded hover:bg-slate-50 dark:hover:bg-slate-800">2</button>
                 <button

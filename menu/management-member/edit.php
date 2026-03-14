@@ -3,7 +3,7 @@
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-500 mb-6">
         <a href="/manajemen-perpustakaan/menu/management-member/"
-            class="hover:text-primary transition-colors">Members</a>
+            class="hover:text-blue-700 transition-colors">Members</a>
         <span class="material-symbols-outlined text-[16px]">chevron_right</span>
         <span class="text-slate-900 dark:text-white font-medium">Edit Member</span>
     </div>
@@ -25,7 +25,7 @@
                     Full Name <span class="text-rose-500">*</span>
                 </label>
                 <input type="text" id="full_name" name="full_name" required value="Budi Santoso"
-                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
+                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
             </div>
 
             <!-- Member ID & Type (2 cols) -->
@@ -36,7 +36,7 @@
                         Member ID <span class="text-rose-500">*</span>
                     </label>
                     <input type="text" id="member_id" name="member_id" required value="MBR-2024-001"
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
                 </div>
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5"
@@ -44,7 +44,7 @@
                         Member Type <span class="text-rose-500">*</span>
                     </label>
                     <select id="member_type" name="member_type" required
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 transition-colors">
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors">
                         <option value="student" selected>Student</option>
                         <option value="lecturer">Lecturer</option>
                         <option value="public">Public</option>
@@ -59,14 +59,14 @@
                         Email Address <span class="text-rose-500">*</span>
                     </label>
                     <input type="email" id="email" name="email" required value="budi.s@email.com"
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
                 </div>
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5" for="phone">
                         Phone Number
                     </label>
                     <input type="tel" id="phone" name="phone" value="+62 812-3456-7890"
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
                 </div>
             </div>
 
@@ -78,14 +78,14 @@
                         Join Date <span class="text-rose-500">*</span>
                     </label>
                     <input type="date" id="join_date" name="join_date" required value="2024-01-15"
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 transition-colors" />
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors" />
                 </div>
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5" for="status">
                         Status <span class="text-rose-500">*</span>
                     </label>
                     <select id="status" name="status" required
-                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 transition-colors">
+                        class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors">
                         <option value="active" selected>Active</option>
                         <option value="inactive">Inactive</option>
                         <option value="suspended">Suspended</option>
@@ -99,7 +99,7 @@
                     Address
                 </label>
                 <textarea id="address" name="address" rows="3"
-                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors resize-none"
+                    class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors resize-none"
                     placeholder="Enter full address...">Jl. Merdeka No. 10, Jakarta</textarea>
             </div>
 
@@ -116,7 +116,7 @@
                         Cancel
                     </a>
                     <button type="submit"
-                        class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm inline-flex items-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                        class="bg-blue-700 hover:bg-blue-700/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm inline-flex items-center gap-2 shadow-lg shadow-blue-700/20 transition-all">
                         <span class="material-symbols-outlined text-[20px]">save</span>
                         Update Member
                     </button>

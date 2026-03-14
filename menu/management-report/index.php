@@ -19,7 +19,7 @@
                 <span class="material-symbols-outlined text-lg">expand_more</span>
             </button>
             <button
-                class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-all">
+                class="flex items-center gap-2 px-4 py-2 bg-blue-700/10 text-blue-700 rounded-lg text-sm font-bold hover:bg-blue-700 hover:text-white transition-all">
                 <span class="material-symbols-outlined text-lg">picture_as_pdf</span>
                 <span>PDF</span>
             </button>
@@ -85,7 +85,7 @@
                     <span
                         class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
                     <input
-                        class="pl-9 pr-4 py-1.5 text-sm bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary"
+                        class="pl-9 pr-4 py-1.5 text-sm bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-blue-700 focus:border-blue-700"
                         placeholder="Cari peminjam..." type="text" />
                 </div>
             </div>

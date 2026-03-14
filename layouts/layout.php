@@ -1,12 +1,28 @@
 <?php
+// session_start();
 $currentPath = $_SERVER['PHP_SELF'];
 
-function isActive($path) {
+function isActive($path)
+{
     global $currentPath;
     return strpos($currentPath, $path) !== false;
 }
 
 $base = '/manajemen-perpustakaan';
+
+if (isset($_POST['logout'])) {
+    $_SESSION = [];
+
+    session_unset();
+    session_destroy();
+
+    echo "<script>
+            alert('berhasil logout');
+            window.location.href='login.php';
+    </script>";
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html class="light" lang="id">
@@ -16,6 +32,10 @@ $base = '/manajemen-perpustakaan';
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Library Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- <link href="../../src/output.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link href="../src/output.css" rel="stylesheet"> -->
+    <link href="./src/output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -25,11 +45,6 @@ $base = '/manajemen-perpustakaan';
             darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        "primary": "#5048e5",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#121121",
-                    },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
                     },
@@ -53,17 +68,17 @@ $base = '/manajemen-perpustakaan';
     </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased font-display">
 
     <div id="sidebar-overlay" class="fixed inset-0 bg-slate-900/50 z-20 hidden lg:hidden"></div>
 
     <div class="flex h-screen overflow-hidden">
 
         <aside id="sidebar"
-            class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-slate-900 border-r border-primary/10 flex flex-col z-30 -translate-x-full lg:translate-x-0 lg:static">
+            class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-slate-900 border-r border-blue-700/10 flex flex-col z-30 -translate-x-full lg:translate-x-0 lg:static">
             <div class="p-6 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+                    <div class="w-10 h-10 rounded-xl bg-blue-700 flex items-center justify-center text-white">
                         <span class="material-symbols-outlined">local_library</span>
                     </div>
                     <div>
@@ -90,6 +105,12 @@ $base = '/manajemen-perpustakaan';
                         'icon'  => 'book',
                         'href'  => $base . '/menu/management-book/',
                         'match' => 'management-book',
+                    ],
+                    [
+                        'label' => 'Categories',
+                        'icon'  => 'category',
+                        'href'  => $base . '/menu/management-category/',
+                        'match' => 'management-category',
                     ],
                     [
                         'label' => 'Members',
@@ -123,19 +144,19 @@ $base = '/manajemen-perpustakaan';
                     if ($item['match'] === '/index.php') {
                         $active = (basename($currentPath) === 'index.php' && strpos($currentPath, '/menu/') === false);
                     }
-                    $activeClass   = 'bg-primary text-white';
-                    $inactiveClass = 'text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors';
+                    $activeClass   = 'bg-blue-700 text-white';
+                    $inactiveClass = 'text-slate-600 dark:text-slate-400 hover:bg-blue-700/10 hover:text-blue-700 transition-colors';
                     $class = $active ? $activeClass : $inactiveClass;
                 ?>
-                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-medium <?php echo $class; ?>"
-                    href="<?php echo htmlspecialchars($item['href']); ?>">
-                    <span class="material-symbols-outlined"><?php echo $item['icon']; ?></span>
-                    <span><?php echo $item['label']; ?></span>
-                </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-medium <?php echo $class; ?>"
+                        href="<?php echo htmlspecialchars($item['href']); ?>">
+                        <span class="material-symbols-outlined"><?php echo $item['icon']; ?></span>
+                        <span><?php echo $item['label']; ?></span>
+                    </a>
                 <?php endforeach; ?>
             </nav>
 
-            <div class="p-4 border-t border-primary/10">
+            <div class="p-4 border-t border-blue-700/10">
                 <div class="flex items-center gap-3 p-2">
                     <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
                         <img alt="Admin"
@@ -145,6 +166,15 @@ $base = '/manajemen-perpustakaan';
                         <p class="text-sm font-semibold text-slate-900 dark:text-white truncate">Andi Wijaya</p>
                         <p class="text-xs text-slate-500 truncate">Senior Librarian</p>
                     </div>
+                    <div>
+                        <form action="" method="POST">
+                            <button type="sumbit" name="logout">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -152,7 +182,7 @@ $base = '/manajemen-perpustakaan';
         <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
 
             <header
-                class="h-16 flex items-center justify-between px-4 lg:px-8 bg-white dark:bg-slate-900 border-b border-primary/10 sticky top-0 z-10">
+                class="h-16 flex items-center justify-between px-4 lg:px-8 bg-white dark:bg-slate-900 border-b border-blue-700/10 sticky top-0 z-10">
                 <div class="flex items-center gap-4 flex-1">
                     <button id="open-menu" class="lg:hidden p-2 text-slate-600 dark:text-slate-300">
                         <span class="material-symbols-outlined">menu</span>
@@ -162,7 +192,7 @@ $base = '/manajemen-perpustakaan';
                         <span
                             class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
                         <input
-                            class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm text-slate-900 dark:text-white"
+                            class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-blue-700 text-sm text-slate-900 dark:text-white"
                             placeholder="Cari buku..." type="text" />
                     </div>
                 </div>
