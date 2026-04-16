@@ -7,7 +7,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
 
 include __DIR__ . '/layouts/layout.php';
 ?>
-<div class="p-2 space-y-8">
+<div class="p-2 space-y-8">  
     <div>
         <h2 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Dashboard Overview</h2>
         <p class="text-slate-500 dark:text-slate-400">Selamat datang kembali, berikut ringkasan perpustakaan hari ini.
