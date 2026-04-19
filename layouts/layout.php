@@ -8,7 +8,7 @@ function isActive($path)
     return strpos($currentPath, $path) !== false;
 }
 
-$base = '/manajemen-perpustakaan';
+$base = '/simperpus';
 
 if (isset($_POST['logout'])) {
     $_SESSION = [];

@@ -32,7 +32,7 @@ include __DIR__ . '/../../layouts/layout.php';
             <h2 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Category Management</h2>
             <p class="text-slate-500 dark:text-slate-400 mt-1">Manage book categories and organize your library collection.</p>
         </div>
-        <a href="/manajemen-perpustakaan/menu/management-category/add.php"
+        <a href="/simperpus/menu/management-category/add.php"
             class="bg-blue-700 hover:bg-blue-700/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm inline-flex items-center gap-2 shadow-lg shadow-blue-700/20 transition-all">
             <span class="material-symbols-outlined text-[20px]">add</span>
             Add New Category
@@ -106,7 +106,7 @@ include __DIR__ . '/../../layouts/layout.php';
                             </td>
                             <td class="px-6 py-4 text-right">
                                 <div class="flex justify-end gap-2">
-                                    <a href="/manajemen-perpustakaan/menu/management-category/edit.php?id=<?php echo $kategori['id']; ?>"
+                                    <a href="/simperpus/menu/management-category/edit.php?id=<?php echo $kategori['id']; ?>"
                                         class="p-2 text-slate-400 hover:text-blue-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
                                         <span class="material-symbols-outlined text-[20px]">edit</span>
                                     </a>

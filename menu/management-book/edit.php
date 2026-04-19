@@ -19,11 +19,11 @@ if (isset($_POST['edit'])) {
     if ($edit) {
         $pesan = "Data Berhasil Diupdate!";
         $tipe  = "success";
-        $redirect = '/manajemen-perpustakaan/menu/management-book/';
+        $redirect = '/simperpus/menu/management-book/';
     } else {
         $pesan = "Data Gagal Diupdate!";
         $tipe  = "error";
-        $redirect = '/manajemen-perpustakaan/menu/management-book/edit.php?id=' . $id;
+        $redirect = '/simperpus/menu/management-book/edit.php?id=' . $id;
     }
 }
 
@@ -31,7 +31,7 @@ if (isset($_POST['edit'])) {
 <div class="p-2 max-w-2xl">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-500 mb-6">
-        <a href="/manajemen-perpustakaan/menu/management-book/" class="hover:text-blue-700 transition-colors">Books</a>
+        <a href="/simperpus/menu/management-book/" class="hover:text-blue-700 transition-colors">Books</a>
         <span class="material-symbols-outlined text-[16px]">chevron_right</span>
         <span class="text-slate-900 dark:text-white font-medium">Edit Book</span>
     </div>
@@ -132,7 +132,7 @@ if (isset($_POST['edit'])) {
                     Delete Book
                 </button>
                 <div class="flex items-center gap-3">
-                    <a href="/manajemen-perpustakaan/menu/management-book/"
+                    <a href="/simperpus/menu/management-book/"
                         class="px-6 py-2.5 rounded-lg text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                         Cancel
                     </a>
