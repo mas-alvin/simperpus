@@ -1,31 +1,6 @@
 <?php include __DIR__ . '/../../layouts/layout.php';
 include __DIR__ . '/../../koneksi.php';
-$id = $_GET['id'];
-$sql = mysqli_query($conn, "SELECT id, nama_buku, pengarang, tahun_terbit, kategori_id, stok FROM buku WHERE id= '$id'");
-$buku = mysqli_fetch_assoc($sql);
 
-$kategori = mysqli_query($conn, "SELECT * FROM kategori WHERE status = 'active'");
-// $get_category = mysq
-
-if (isset($_POST['edit'])) {
-    $nama_buku = $_POST['nama_buku'];
-    $pengarang = $_POST['pengarang'];
-    $tahun_terbit = $_POST['tahun_terbit'];
-    $kategori_id = $_POST['kategori_id'];
-    $stok = $_POST['stok'];
-
-    $edit = mysqli_query($conn, "UPDATE buku SET nama_buku = '$nama_buku', pengarang = '$pengarang', tahun_terbit = '$tahun_terbit', kategori_id = '$kategori_id', stok = '$stok' WHERE id = '$id'");
-
-    if ($edit) {
-        $pesan = "Data Berhasil Diupdate!";
-        $tipe  = "success";
-        $redirect = '/simperpus/menu/management-book/';
-    } else {
-        $pesan = "Data Gagal Diupdate!";
-        $tipe  = "error";
-        $redirect = '/simperpus/menu/management-book/edit.php?id=' . $id;
-    }
-}
 
 ?>
 <div class="p-2 max-w-2xl">

@@ -1,57 +1,6 @@
 <?php include __DIR__ . '/../../layouts/layout.php'; 
 include __DIR__ . '/../../koneksi.php';
 
-if(isset($_POST['tambah'])){
-    $nama_buku = $_POST['nama_buku'];
-
-    $foto_buku = $_FILES['foto_buku']['name'];
-    $batas = explode('.', $foto_buku);
-    $extensi = strtolower(end($batas));
-    $ukuran = $_FILES['foto_buku']['size'];
-    $error = $_FILES['foto_buku']['error'];
-    $tmp = $_FILES['foto_buku']['tmp_name'];
-
-    $pengarang = $_POST['pengarang'];
-    $tahun_terbit = $_POST['tahun_terbit'];
-    $kategori_id = $_POST['kategori_id'];
-    $stok = $_POST['stok'];
-
-    if($error === 4){
-        $gambar = "default.png";
-    }else{
-        $format = ['png', 'jpg', 'jpeg'];
-        if(!in_array($extensi, $format)){
-            $pesan = "Format Gambar Tidak Diizinkan!";
-            $tipe  = "error";
-            $redirect = 'add.php';
-            exit;
-        }
-
-        if($ukuran > 2000000){
-            $pesan = "Ukuran Gambar Terlalu Besar!";
-            $tipe  = "error";
-            $redirect = 'add.php';
-            exit;
-        }
-
-        $nama_gambar_baru = uniqid() . '.' . $extensi;
-        move_uploaded_file($tmp, '../../assets/img/book/' . $nama_gambar_baru);
-    }
-    $tambah_data = mysqli_query($conn, "INSERT INTO buku (nama_buku, foto_buku, pengarang, tahun_terbit, kategori_id, stok)
-    VALUES ('$nama_buku', '$nama_gambar_baru', '$pengarang', '$tahun_terbit', '$kategori_id', '$stok')");
-
-    if ($tambah_data) {
-        $pesan = "Data Buku Ditambahkan!";
-        $tipe  = "success";
-        $redirect = 'index.php';
-    }else{
-        $pesan = "Data Gagal Ditambahkan!";
-        $tipe  = "error";
-        $redirect = 'add.php';
-    }
-}
-
-$ambil_kategori = mysqli_query($conn, "SELECT id, nama_kategori FROM kategori WHERE status = 'active'")
 
 
 ?>

@@ -1,44 +1,6 @@
 <?php 
 include __DIR__ . '/../../koneksi.php';
 
-$pesan = isset($_GET['pesan']) ? $_GET['pesan'] : "";
-$tipe  = isset($_GET['tipe']) ? $_GET['tipe'] : "";
-$redirect = "index.php"; // Ditambahkan untuk memperbaiki notifikasi SweetAlert yang tidak berfungsi
-
-//hapus
-if(isset($_GET['id']) && $_GET['id'] !== ''){
-    // Mencegah SQL Injection (Best practice keamanan dasar untuk pemula)
-    $id = mysqli_real_escape_string($conn, $_GET['id']);
-    
-    // 1. Ambil data buku untuk mendapatkan nama file gambarnya
-    $get_buku = mysqli_query($conn, "SELECT foto_buku FROM buku WHERE id = '$id'");
-    $buku_data = mysqli_fetch_assoc($get_buku);
-    
-    // 2. Hapus data dari database terlebih dahulu
-    $delete = mysqli_query($conn, "DELETE FROM buku WHERE id = '$id'");
-    
-    if($delete) {
-        // 3. Jika berhasil dihapus dari DB, baru hapus file gambarnya (jika ada dan bukan default)
-        if($buku_data && $buku_data['foto_buku'] && $buku_data['foto_buku'] !== 'default.png') {
-            $path_gambar = __DIR__ . '/../../assets/img/book/' . $buku_data['foto_buku'];
-            if(file_exists($path_gambar)) {
-                unlink($path_gambar); // fungsi PHP untuk menghapus file fisik
-            }
-        }
-        
-        header('Location: index.php?pesan=' . urlencode('Buku Berhasil Dihapus!') . '&tipe=success');
-        exit;
-    }else{
-        header('Location: index.php?pesan=' . urlencode('Buku Gagal Dihapus!') . '&tipe=error'); // Typo kata 'Kategori' diperbaiki
-        exit;
-    }
-}
-
-$buku = [];
-$sql = mysqli_query($conn, "SELECT * FROM buku");
-while($data = mysqli_fetch_assoc($sql)) {
-    $buku[] = $data;
-}
 include __DIR__ . '/../../layouts/layout.php'; 
 
 ?>
@@ -113,7 +75,7 @@ include __DIR__ . '/../../layouts/layout.php';
                     <!-- Row 1 - High Stock -->
                      <?php foreach($buku as $book): ?>
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
-                        <td class="px-6 py-4">
+                        <!-- <td class="px-6 py-4">
                             <div class="flex items-center gap-4">
                                 <div class="w-12 h-16 bg-slate-100 rounded shadow-sm flex-shrink-0 overflow-hidden">
                                     <img alt="Book Cover" class="w-full h-full object-cover"
@@ -122,9 +84,12 @@ include __DIR__ . '/../../layouts/layout.php';
                                 </div>
                                 <div>
                                     <p class="text-sm font-bold text-slate-900 dark:text-white"><?= $book['nama_buku'] ?></p>
-                                    <!-- <p class="text-xs text-slate-500 mt-0.5">ISBN: 978-1250301697</p> -->
+                                    <p class="text-xs text-slate-500 mt-0.5">ISBN: 978-1250301697</p>
                                 </div>
                             </div>
+                        </td> -->
+                        <td class="px-6 py-4">
+                            <p class="text-sm text-slate-700 dark:text-slate-300"><?= $book['judul'] ?></p>
                         </td>
                         <td class="px-6 py-4">
                             <p class="text-sm text-slate-700 dark:text-slate-300"><?= $book['pengarang'] ?></p>
