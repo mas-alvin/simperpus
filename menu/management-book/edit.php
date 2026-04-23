@@ -1,7 +1,6 @@
 <?php include __DIR__ . '/../../layouts/layout.php';
 include __DIR__ . '/../../koneksi.php';
 
-
 ?>
 <div class="p-2 max-w-2xl">
     <!-- Breadcrumb -->
@@ -26,7 +25,7 @@ include __DIR__ . '/../../koneksi.php';
                 <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5" for="title">
                     Nama Buku <span class="text-rose-500">*</span>
                 </label>
-                <input type="text" id="title" name="nama_buku" required value="<?= $buku['nama_buku'] ?>"
+                <input type="text" id="title" name="judul" required value="<?= $buku['judul'] ?>"
                     class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors" />
             </div>
 
@@ -56,7 +55,7 @@ include __DIR__ . '/../../koneksi.php';
                     </label>
                     <select id="category" name="kategori_id" required
                         class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors">
-                        <?php while($kat = mysqli_fetch_assoc($kategori)) : ?>
+                        <?php while($kat = mysqli_fetch_assoc($sqlkategori)) : ?>
                         <option value="<?= $kat['id'] ?>"><?= $kat['nama_kategori'] ?></option>
                         <?php endwhile; ?>
                     </select>

@@ -49,6 +49,7 @@
             const url = new URL(window.location);
             url.searchParams.delete('pesan');
             url.searchParams.delete('tipe');
+            window.location.href = '<?= $redirect ?>'
             window.history.replaceState({}, document.title, url.pathname);
         });
     <?php endif; ?>

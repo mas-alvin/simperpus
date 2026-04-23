@@ -11,7 +11,7 @@ include __DIR__ . '/../../layouts/layout.php';
             <p class="text-slate-500 dark:text-slate-400 mt-1">Manage library catalog, inventory stock, and
                 availability.</p>
         </div>
-        <a href="/manajemen-perpustakaan/menu/management-book/add.php"
+        <a href="/simperpus/menu/management-book/add.php"
             class="bg-blue-700 hover:bg-blue-700/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm inline-flex items-center gap-2 shadow-lg shadow-blue-700/20 transition-all">
             <span class="material-symbols-outlined text-[20px]">add</span>
             Add New Book
@@ -73,7 +73,7 @@ include __DIR__ . '/../../layouts/layout.php';
                 </thead>
                 <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
                     <!-- Row 1 - High Stock -->
-                     <?php foreach($buku as $book): ?>
+                     <?php foreach($getcategory as $book): ?>
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
                         <!-- <td class="px-6 py-4">
                             <div class="flex items-center gap-4">
@@ -95,8 +95,11 @@ include __DIR__ . '/../../layouts/layout.php';
                             <p class="text-sm text-slate-700 dark:text-slate-300"><?= $book['pengarang'] ?></p>
                         </td>
                         <td class="px-6 py-4">
+                            
                             <span
-                                class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"><?= $book['nama_kategori'] ?></span>
+                                class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"><?= $book['nama_kategori'] ?>
+                            </span>
+                            
                         </td>
                         <td class="px-6 py-4">
                             <span
@@ -110,7 +113,7 @@ include __DIR__ . '/../../layouts/layout.php';
                         </td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-2">
-                                <a href="edit.php?id=<?= $book['id'] ?>"
+                                <a href="edit.php?id=<?= $book['id']; ?>"
                                     class="p-2 text-slate-400 hover:text-blue-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
                                     <span class="material-symbols-outlined text-[20px]">edit</span>
                                 </a>

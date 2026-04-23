@@ -1,8 +1,6 @@
 <?php include __DIR__ . '/../../layouts/layout.php'; 
 include __DIR__ . '/../../koneksi.php';
 
-
-
 ?>
 <div class="p-2 max-w-2xl">
     <!-- Breadcrumb -->
@@ -26,16 +24,16 @@ include __DIR__ . '/../../koneksi.php';
                 <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5" for="title">
                     Nama Buku <span class="text-rose-500">*</span>
                 </label>
-                <input type="text" id="title" name="nama_buku" required
+                <input type="text" id="title" name="judul" required
                     class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 transition-colors"
                     placeholder="e.g. Atomic Habits" />
             </div>
 
-            <div class="mb-4">
+            <!-- <div class="mb-4">
                 <label>Cover Buku</label>
                 <input type="file" name="foto_buku" class="w-full border p-2" accept="image/*">
                 <p class="text-xs text-slate-500 mt-1">Format: JPG, PNG, JPEG (Max 2MB)</p>
-            </div>
+            </div> -->
 
             <div>
                 <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5" for="author">
@@ -55,9 +53,9 @@ include __DIR__ . '/../../koneksi.php';
                     <select id="category" name="kategori_id" required
                         class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-700/50 focus:border-blue-700 text-sm text-slate-900 dark:text-slate-100 transition-colors">
                         <option value="">Select category...</option>
-                        <?php while($kat = mysqli_fetch_assoc($ambil_kategori)) { ?>
-                        <option value="<?= $kat['id'] ?>"><?= $kat['nama_kategori'] ?></option>
-                        <?php } ?>
+                        <?php while($data = mysqli_fetch_assoc($getkategori)) :?>
+                            <option value="<?= $data['id']; ?>"><?= $data['nama_kategori']; ?></option>
+                            <?php endwhile; ?>
                     </select>
                 </div>
                 <div>
